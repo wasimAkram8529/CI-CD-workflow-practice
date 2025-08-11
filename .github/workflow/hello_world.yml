@@ -7,7 +7,7 @@ on:
 
 jobs:
   hello_world:
-  run on: ubuntu latest
-  steps:
-    - name: "hello world"
-      run: echo "Hello world"
+    runs-on: windows-latest
+    steps:
+      - name: "hello world"
+        run: echo "Hello world"
