@@ -5,12 +5,25 @@ on:
     branches:
       - master
       - main
+      - test
+  pull_request:
+    branches:
+      - main
+
 
 jobs:
   on-push:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - uses: "actions/checkout@v4"
-      
+
       - name: "First step"
-        run: ./script.sh          
+        run: ./script.sh 
+        
+  on-pull-request:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: "on pull request"
+        run: echo "Running on pull request"
