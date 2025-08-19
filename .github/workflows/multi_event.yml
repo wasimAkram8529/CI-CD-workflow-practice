@@ -10,5 +10,7 @@ jobs:
   on-push:
     runs-on: ubuntu-latest
     steps:
+      - uses: "actions/checkout@v4"
+      
       - name: "First step"
         run: ./script.sh          
