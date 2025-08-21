@@ -16,7 +16,7 @@ on:
 jobs:
   on-push:
     if: github.event_name == 'push'
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: "actions/checkout@v4"
 
@@ -25,21 +25,21 @@ jobs:
 
   on-pull-request:
     if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: "on pull request"
         run: echo "Running on pull request"
 
   on-pull-request-opened:
     if: github.event_name == 'pull_request' && github.event.action == 'opened'
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: "on pull request opened"
         run: echo "Running on pull request open"
 
   on-pull-request-closed:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    runs-on: ubuntu-latest
+    runs-on: selft-hosted
     steps:
       - name: "on pull request closed"
         run: echo "Running on pull request closed"
