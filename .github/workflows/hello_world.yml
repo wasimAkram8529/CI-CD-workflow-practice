@@ -6,8 +6,8 @@ on:
       - master
 
 jobs:
-  hello_world:
-    runs-on: self-hosted
+  hello_world: # unique job id in string
+    runs-on: ubuntu-latest
     steps:
       - name: "hello world"
         run: echo "Hello world"
