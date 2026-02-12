@@ -26,3 +26,4 @@ jobs:
           env
           ls /
           ls /home
+          echo $github
