@@ -10,8 +10,7 @@ on:
       - main
     types:
       - opened
-      - closed  
-
+      - closed
 
 jobs:
   on-push:
@@ -21,7 +20,7 @@ jobs:
       - uses: "actions/checkout@v4"
 
       - name: "First step"
-        run: echo "First step" 
+        run: echo "First step"
 
   on-pull-request:
     if: github.event_name == 'pull_request'
